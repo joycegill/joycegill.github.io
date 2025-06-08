@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#media">Media/Teaching</a></li>
+            <li><a href="#honors">Honors/Awards</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1>Hi, I'm [Your Name]!</h1>
+        <p>Welcome to my personal portfolio.</p>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>[A short introduction about yourself, your interests, and your background.]</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python
+                <span class="skill-bar"><span class="skill-bar-fill" data-width="90%"></span></span>
+            </li>
+            <li>Java
+                <span class="skill-bar"><span class="skill-bar-fill" data-width="80%"></span></span>
+            </li>
+            <li>C++
+                <span class="skill-bar"><span class="skill-bar-fill" data-width="75%"></span></span>
+            </li>
+            <li>JavaScript
+                <span class="skill-bar"><span class="skill-bar-fill" data-width="70%"></span></span>
+            </li>
+            <li>HTML/CSS
+                <span class="skill-bar"><span class="skill-bar-fill" data-width="85%"></span></span>
+            </li>
+            <li>Git
+                <span class="skill-bar"><span class="skill-bar-fill" data-width="80%"></span></span>
+            </li>
+            <li>Photoshop
+                <span class="skill-bar"><span class="skill-bar-fill" data-width="60%"></span></span>
+            </li>
+        </ul>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project Title 1</h3>
+            <p>Short description of project 1.</p>
+        </div>
+        <div class="project">
+            <h3>Project Title 2</h3>
+            <p>Short description of project 2.</p>
+        </div>
+    </section>
+    <section id="media">
+        <h2>Media/Teaching</h2>
+        <p>[Links or descriptions of media appearances, teaching experiences, or educational content.]</p>
+    </section>
+    <section id="honors">
+        <h2>Honors/Awards</h2>
+        <ul>
+            <li>Honor/Award 1</li>
+            <li>Honor/Award 2</li>
+        </ul>
+    </section>
+    <footer>
+        <p>Contact: [your.email@example.com]</p>
+    </footer>
+    <script>
+    // Section fade-in on scroll
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+
+    // Animate skill bars when skills section is visible
+    const skillSection = document.getElementById('skills');
+    const skillBars = document.querySelectorAll('.skill-bar-fill');
+    let skillsAnimated = false;
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !skillsAnimated) {
+          skillBars.forEach(bar => {
+            bar.style.width = bar.getAttribute('data-width');
+          });
+          skillsAnimated = true;
+        }
+      });
+    }, { threshold: 0.3 });
+    skillObserver.observe(skillSection);
+    </script>
+</body>
+</html> 
