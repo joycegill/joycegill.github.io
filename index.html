@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Joyce Gill</title>
     <link rel="stylesheet" href="portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,74 +13,101 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="media.html">Media/Teaching</a></li>
             <li><a href="honors.html">Honors/Awards</a></li>
         </ul>
     </nav>
+
     <section id="home">
-        <h1>Hi, I'm Joyce 👋</h1>
+        <div class="profile-container">
+            <div class="floating-gallery">
+                <div class="profile-image main">
+                    <img src="images/profile.jpg" alt="Joyce Gill">
+                </div>
+                <div class="floating-image img1">
+                    <img src="images/gallery1.jpg" alt="Joyce and friends at baseball game">
+                </div>
+                <div class="floating-image img2">
+                    <img src="images/gallery2.jpg" alt="Joyce studying abroad">
+                </div>
+                <div class="floating-image img3">
+                    <img src="images/gallery3.jpg" alt="Joyce and icecream">
+                </div>
+                <div class="floating-image img4">
+                    <img src="images/gallery4.jpg" alt="Joyce in New York">
+                </div>
+                <div class="floating-image img5">
+                    <img src="images/gallery5.jpg" alt="Joyce in museum">
+                </div>
+                <div class="floating-image img6">
+                    <img src="images/gallery6.jpg" alt="Joyce with friend">
+                </div>
+            </div>
+            <h1>Hi, I'm Joyce! 👋</h1>
+            <p class="subtitle">Computer Science Student & Researcher</p>
+            <div class="connect">
+                <h3>Connect with Me</h3>
+                <a href="mailto:gilljoyc@grinnell.edu" class="email-link">gilljoyc@grinnell.edu</a>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/joycegill/" target="_blank" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/joycegill" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
+
     <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a junior at Grinnell College, majoring in Computer Science with concentrations in Statistics and Digital Studies. 
-            At Grinnell College, I am working as an AI Research Assistant at Professor Weinman's lab, Course Mentor for 
-            CSC 208: Discrete Structures, Lead Instructional Coordinator at the Grinnell Middle School, Admissions Tour Guide, 
-            and Information Session Co-Host.</p>
+        <h2 id="about-title">About Me</h2>
+        <div class="about-content">
+            <p>I'm a senior at Grinnell College, majoring in Computer Science with concentrations in Statistics and Digital Studies. 
+                At Grinnell College, I am working as an AI Research Assistant at Professor Weinman's Lab, Senior Interviewer at the Office of Admissions,
+                and Lead Instructional Coordinator at the Grinnell Middle School. </p>
 
-        <p>This summer, I will be joining Carnegie Mellon University's Human-Computer Interaction Institute
-            as a part of their Summer 2025 Research Program (REU). 
-            I will be working as an undergraduate researcher at Professor Paulo Carvalho's Optimized Algorithms and Knowledge (OAK) Lab.</p>
-  
-        <p>Last summer, I worked at Columbia University as a part of the Amazon SURE Research Program. I served as an undergraduate human-computer interaction researcher at Professor Brian Smith's Computer-Enabled Abilities Lab (CEAL).</p>
+            <p>I am currently an undergraduate researcher at Carnegie Mellon University's Human-Computer Interaction Institute through the NSF REU Program.
+                I work at Professor Paulo Carvalho's Optimized Algorithms and Knowledge (OAK) Lab to investigate how LLMs 
+                can optimize mastery-based testing to provide personalized learning experiences for computer science students. </p>
+      
+            <p>Last summer, I worked at Columbia University as a part of the Amazon Summer Research (SURE) Program. 
+                I served as an undergraduate human-computer interaction researcher at Professor Brian Smith's Computer-Enabled Abilities Lab (CEAL)
+                to explore how AR can be used to combat gentrification and preserve oral history in Harlem, New York.</p>
 
-        <p>I am interested in working in human-computer interaction, product, learning sciences, research, consulting, program management, social computing, and UI/UX. I hope to work on projects that have meaningful social impact and am deeply committed to creating an environment where individuals from all backgrounds come together to enhance human lives.</p>
+            <p>My research interests lie at the intersection of human-computer interaction, social computing, learning sciences, AI, and human behavior.
+                I hope to work on projects that have meaningful social impact and am deeply committed to creating an environment where individuals from all backgrounds come together to enhance human lives.</p>
 
-        <p>I am actively seeking Fall 2025 and Winter 2025 internship and research positions. If you know of any opportunities, please feel free to reach out to me via LinkedIn.</p>
-
-        <p>A little bit more about me: I was born and raised in Seoul, South Korea but my family is from Omaha, Nebraska. In my free time, I enjoy hiking, traveling, exploring museums, and spending time with my friends, family, and dog.</p>
+            <p>A little bit more about me: I was born and raised in Seoul, South Korea but my family is from Omaha, Nebraska. 
+                In my free time, I enjoy hiking, traveling, exploring museums, and spending time with my friends, family, and dog.</p>
+        </div>
     </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python
-                <span class="skill-bar"><span class="skill-bar-fill" data-width="90%"></span></span>
-            </li>
-            <li>Java
-                <span class="skill-bar"><span class="skill-bar-fill" data-width="80%"></span></span>
-            </li>
-            <li>C++
-                <span class="skill-bar"><span class="skill-bar-fill" data-width="75%"></span></span>
-            </li>
-            <li>JavaScript
-                <span class="skill-bar"><span class="skill-bar-fill" data-width="70%"></span></span>
-            </li>
-            <li>HTML/CSS
-                <span class="skill-bar"><span class="skill-bar-fill" data-width="85%"></span></span>
-            </li>
-            <li>Git
-                <span class="skill-bar"><span class="skill-bar-fill" data-width="80%"></span></span>
-            </li>
-            <li>Photoshop
-                <span class="skill-bar"><span class="skill-bar-fill" data-width="60%"></span></span>
-            </li>
-        </ul>
-    </section>
+
     <section id="projects">
-        <h2>Projects</h2>
+        <h2>Research & Projects</h2>
         <div class="project">
             <h3>Project Title 1</h3>
             <p>Short description of project 1.</p>
+            <div class="project-links">
+                <a href="#" class="project-link">Source</a>
+                <a href="#" class="project-link">Paper</a>
+            </div>
         </div>
         <div class="project">
             <h3>Project Title 2</h3>
             <p>Short description of project 2.</p>
+            <div class="project-links">
+                <a href="#" class="project-link">Source</a>
+                <a href="#" class="project-link">Website</a>
+            </div>
         </div>
     </section>
+
     <footer>
-        <p>Contact: [your.email@example.com]</p>
+        <p>© 2024 Joyce Gill. All rights reserved.</p>
     </footer>
+
     <script>
     // Section fade-in on scroll
     const sections = document.querySelectorAll('section');
@@ -92,22 +119,6 @@
       });
     }, { threshold: 0.15 });
     sections.forEach(section => observer.observe(section));
-
-    // Animate skill bars when skills section is visible
-    const skillSection = document.getElementById('skills');
-    const skillBars = document.querySelectorAll('.skill-bar-fill');
-    let skillsAnimated = false;
-    const skillObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !skillsAnimated) {
-          skillBars.forEach(bar => {
-            bar.style.width = bar.getAttribute('data-width');
-          });
-          skillsAnimated = true;
-        }
-      });
-    }, { threshold: 0.3 });
-    skillObserver.observe(skillSection);
     </script>
 </body>
 </html> 

@@ -3,13 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Honors & Awards - Joyce's Portfolio</title>
+    <title>Honors & Awards - Joyce Gill</title>
     <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #34495e;
+            --timeline: #85dcfc;
+            --text: #2c3e50;
+            --text-light: #34495e;
+            --bg: #ffffff;
+            --bg-alt: #f8f9fa;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .honors-section {
+            margin-bottom: 4em;
+            padding: 2em;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--timeline);
+            opacity: 0.8;
+        }
+
+        .timeline-group {
+            position: relative;
+            padding-left: 2em;
+            margin-bottom: 2em;
+        }
+
+        .timeline-group::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 0.5em;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--timeline);
+            box-shadow: 0 0 0 4px rgba(176, 199, 227, 0.2);
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1em;
+            font-size: 1.1em;
+        }
+
+        .timeline-item {
+            margin-bottom: 1em;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-content {
+            background: var(--bg);
+            padding: 1.5em;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(44, 62, 80, 0.08);
+            transition: var(--transition);
+            transform: translateX(0);
+        }
+
+        .timeline-content:hover {
+            transform: translateX(10px);
+            box-shadow: 0 6px 25px rgba(44, 62, 80, 0.12);
+        }
+
+        .timeline-content p {
+            margin: 0;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .timeline-content .institution {
+            font-size: 0.9em;
+            color: var(--accent);
+            margin-top: 0.5em;
+            font-weight: 500;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3em;
+        }
+
+        .section-header h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            color: var(--primary);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1em;
+        }
+
+        .award-category {
+            font-size: 0.9em;
+            color: var(--accent);
+            margin-top: 0.5em;
+            font-weight: 500;
+        }
+
+        .award-list {
+            margin-top: 1em;
+        }
+
+        .award-list p {
+            margin-bottom: 0.5em;
+        }
+
+        .award-list p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="index.html#about">About</a></li>
             <li><a href="index.html#skills">Skills</a></li>
             <li><a href="index.html#projects">Projects</a></li>
@@ -17,15 +150,150 @@
             <li><a href="honors.html">Honors/Awards</a></li>
         </ul>
     </nav>
-    <section id="honors">
-        <h2>Honors/Awards</h2>
-        <ul>
-            <li>Honor/Award 1</li>
-            <li>Honor/Award 2</li>
-        </ul>
+
+    <section class="honors-section">
+        <div class="section-header">
+            <h2>Honors & Awards</h2>
+            <p>A timeline of my achievements and recognition</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-group">
+                <div class="timeline-date">2025</div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>NSF REU Fellowship</p>
+                        <div class="publisher">Carnegie Mellon University</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>Computing Research Association (CRA) Undergrad Award</p>
+                        <div class="publisher">Last Mile Education</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>Schusterman Award</p>
+                        <div class="publisher">Last Mile Education</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>School Record Holder: STA 230 Data Science course</p>
+                        <div class="publisher">Grinnell College</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-group">
+                <div class="timeline-date">2024</div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>Amazon Summer Undergraduate Research Experience (SURE) Fellowship</p>
+                        <div class="publisher">Columbia University</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-group">
+                <div class="timeline-date">2023</div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>OCS Full-Year Scholarship Grant Recipient</p>
+                        <div class="institution">Grinnell College</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-group">
+                <div class="timeline-date">2022</div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>United States of America Computing Olympiad (USACO) Gold Division</p>
+                        <div class="publisher">United States of America Computing Olympiad</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-group">
+                <div class="timeline-date">2021</div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>United States of America Computing Olympiad (USACO) Silver Division</p>
+                        <div class="publisher">United States of America Computing Olympiad</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>AP Scholar with Distinction</p>
+                        <div class="publisher">College Board</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-group">
+                <div class="timeline-date">2020</div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>United States of America Computing Olympiad (USACO) Bronze Division</p>
+                        <div class="publisher">United States of America Computing Olympiad</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-group">
+                <div class="timeline-date">2019</div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>Semifinalist</p>
+                        <div class="institution">Korea Business Competition</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>1st Place All-Star</p>
+                        <div class="institution">American Computer Science League Junior Division</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-group">
+                <div class="timeline-date">2017</div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>3rd Place Harp</p>
+                        <div class="institution">World Association for Arts Exchange</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-group">
+                <div class="timeline-date">2016</div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>U.S. President's Volunteer Service Award Gold</p>
+                        <div class="institution">Barack Obama</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
     <footer>
-        <p>Contact: [your.email@example.com]</p>
+        <p>© 2024 Joyce Gill. All rights reserved.</p>
     </footer>
+
+    <script>
+    // Section fade-in on scroll
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+    </script>
 </body>
 </html> 
