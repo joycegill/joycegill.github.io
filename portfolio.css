@@ -1,5 +1,5 @@
 :root {
-    --primary: #c3eefa;  /* Light Blue */
+    --primary: #2f9fe4;  /* Light Blue */
     --accent: #FFB5E8;   /* Pastel Pink */
     --bg: #ffffff;
     --text: #2D3047;
@@ -88,7 +88,7 @@ h3 {
     padding: 6em 2em;
     margin: 0;
     max-width: none;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--bg) 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--bg) 80%);
 }
 
 .profile-container {
@@ -268,32 +268,6 @@ h3 {
     color: var(--text-light);
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 2em;
-    margin-top: 2em;
-}
-
-.skill-item {
-    text-align: center;
-    transition: transform var(--transition);
-}
-
-.skill-item:hover {
-    transform: translateY(-5px);
-}
-
-.skill-item i {
-    font-size: 2.5em;
-    color: var(--primary);
-    margin-bottom: 0.5em;
-}
-
-.skill-item span {
-    display: block;
-    color: var(--text-light);
-}
 
 /* Container section */
 #projects {
@@ -328,12 +302,13 @@ h3 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    max-width: 475px;
 }
 
 /* Image wrapper */
 .project-preview {
     width: 100% !important;
-    height: 50% !important;
+    height: 320px !important;
     overflow: hidden;
     position: relative;
 }
@@ -348,20 +323,22 @@ h3 {
 
 /* Text content */
 .project-content {
-    padding: 1.5rem;
+    padding: 1rem 1.2rem;
 }
 
 /* Title */
 .project-content h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin: 0 0 0.3rem 0;
+    line-height: 1.2;
 }
 
 /* Description */
 .project-content p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: var(--text-light);
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
 }
 
 /* Links */
@@ -371,12 +348,18 @@ h3 {
 }
 
 .project-link {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
     background: var(--primary);
     color: white;
     border-radius: 6px;
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background: var(--accent);
+    transform: translateY(-1px);
 }
 
 footer {
