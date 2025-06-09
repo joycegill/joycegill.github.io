@@ -295,43 +295,88 @@ h3 {
     color: var(--text-light);
 }
 
+/* Container section */
+#projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* Section heading */
+#projects h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary);
+}
+
+/* Grid layout for projects */
+.projects-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Individual project card */
 .project {
-    margin-bottom: 3em;
-    padding: 2em;
-    background: var(--bg);
+    width: calc(50% - 1rem) !important;
+    background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    transition: transform var(--transition);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
-.project:hover {
-    transform: translateY(-5px);
+/* Image wrapper */
+.project-preview {
+    width: 100% !important;
+    height: 50% !important;
+    overflow: hidden;
+    position: relative;
 }
 
-.project h3 {
-    color: var(--text);
-    margin-bottom: 0.5em;
+/* Image itself */
+.project-preview img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center;
 }
 
-.project p {
+/* Text content */
+.project-content {
+    padding: 1.5rem;
+}
+
+/* Title */
+.project-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Description */
+.project-content p {
+    font-size: 0.95rem;
     color: var(--text-light);
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
+/* Links */
 .project-links {
     display: flex;
-    gap: 1em;
+    gap: 0.5rem;
 }
 
 .project-link {
-    color: var(--primary);
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 6px;
     text-decoration: none;
-    font-weight: 500;
-    transition: color var(--transition);
-}
-
-.project-link:hover {
-    color: var(--accent);
 }
 
 footer {
@@ -417,6 +462,14 @@ footer {
         width: 100px;
         height: 100px;
     }
+    
+    .projects-grid {
+        flex-direction: column;
+    }
+    
+    .project {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -443,6 +496,10 @@ footer {
     scroll-margin-top: 80px;
 }
 
-#about-title {
-    scroll-margin-top: 80px;
+#about-title, #projects-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    font-size: 2em;
+    font-weight: 600;
 } 
