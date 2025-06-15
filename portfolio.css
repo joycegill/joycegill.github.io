@@ -273,7 +273,7 @@ h3 {
 #projects {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 4rem 1rem;
 }
 
 /* Section heading */
@@ -295,23 +295,24 @@ h3 {
 
 /* Individual project card */
 .project {
-    flex: 1 1 450px; /* This makes cards equal width with a minimum of 450px */
-    max-width: 500px; /* Maximum width for larger screens */
+    flex: 0 1 calc(50% - 1rem); /* Take up half the space minus gap on desktop */
+    max-width: 500px;
     background: white;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    height: 100%; /* Ensure equal height */
+    height: 100%;
 }
 
 /* Image wrapper */
 .project-preview {
     position: relative;
     width: 100%;
-    padding-top: 66.67%; /* 3:2 aspect ratio */
+    padding-top: 66.67%;
     overflow: hidden;
+    flex-shrink: 0; /* Prevent image from shrinking */
 }
 
 /* Image itself */
@@ -328,9 +329,10 @@ h3 {
 /* Text content */
 .project-content {
     padding: 1.5rem;
-    flex-grow: 1; /* Allow content to fill remaining space */
+    flex: 1;
     display: flex;
     flex-direction: column;
+    min-height: 0; /* Allow content to shrink if needed */
 }
 
 /* Title */
@@ -348,14 +350,16 @@ h3 {
     line-height: 1.5;
 }
 
-/* Links */
+/* Links container */
 .project-links {
-    margin-top: auto; /* Push links to bottom */
+    margin-top: auto;
     display: flex;
     gap: 0.8rem;
     flex-wrap: wrap;
+    padding-top: 1rem; /* Add space above links */
 }
 
+/* Individual link */
 .project-link {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
@@ -365,6 +369,9 @@ h3 {
     text-decoration: none;
     transition: all 0.3s ease;
     white-space: nowrap;
+    flex: 1; /* Make buttons take equal space */
+    text-align: center; /* Center text in buttons */
+    min-width: 120px; /* Minimum width for buttons */
 }
 
 .project-link:hover {
@@ -457,18 +464,43 @@ footer {
         height: 100px;
     }
     
+    #projects {
+        padding: 3rem 1rem;
+    }
+
     .projects-grid {
         flex-direction: column;
         align-items: center;
+        gap: 2rem;
     }
     
     .project {
+        flex: 0 1 100%; /* Take full width on mobile */
         width: 100%;
-        max-width: 450px;
+        max-width: 100%; /* Allow full width on mobile */
     }
     
     .project-preview {
         padding-top: 56.25%; /* 16:9 aspect ratio for mobile */
+    }
+
+    .project-content {
+        padding: 1.2rem;
+    }
+
+    .project-links {
+        flex-direction: row; /* Keep buttons side by side */
+        gap: 0.8rem;
+        width: 100%;
+        justify-content: center; /* Center the buttons */
+    }
+
+    .project-link {
+        flex: 1; /* Make buttons take equal space */
+        max-width: 200px; /* Limit button width */
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        text-align: center;
     }
 }
 
@@ -491,12 +523,16 @@ footer {
         height: 80px;
     }
     
+    #projects {
+        padding: 2rem 1rem;
+    }
+
     .project {
-        max-width: 100%;
+        margin: 0; /* Remove any margin */
     }
     
     .project-content {
-        padding: 1.2rem;
+        padding: 1rem;
     }
     
     .project-content h3 {
@@ -505,11 +541,19 @@ footer {
     
     .project-content p {
         font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .project-links {
+        flex-direction: column; /* Stack buttons vertically on very small screens */
+        align-items: stretch; /* Make buttons full width */
     }
     
     .project-link {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.85rem;
+        max-width: none; /* Remove max-width constraint */
+        width: 100%;
+        padding: 0.7rem 1rem;
+        font-size: 0.95rem;
     }
 }
 
