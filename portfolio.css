@@ -286,80 +286,90 @@ h3 {
 /* Grid layout for projects */
 .projects-grid {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
+    justify-content: center;
 }
 
 /* Individual project card */
 .project {
-    width: calc(50% - 1rem) !important;
+    flex: 1 1 450px; /* This makes cards equal width with a minimum of 450px */
+    max-width: 500px; /* Maximum width for larger screens */
     background: white;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    max-width: 475px;
+    height: 100%; /* Ensure equal height */
 }
 
 /* Image wrapper */
 .project-preview {
-    width: 100% !important;
-    height: 320px !important;
-    overflow: hidden;
     position: relative;
+    width: 100%;
+    padding-top: 66.67%; /* 3:2 aspect ratio */
+    overflow: hidden;
 }
 
 /* Image itself */
 .project-preview img {
-    width: 100% !important;
-    height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }
 
 /* Text content */
 .project-content {
-    padding: 1rem 1.2rem;
+    padding: 1.5rem;
+    flex-grow: 1; /* Allow content to fill remaining space */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Title */
 .project-content h3 {
-    font-size: 1rem;
-    margin: 0 0 0.3rem 0;
-    line-height: 1.2;
+    font-size: 1.2rem;
+    margin: 0 0 0.8rem 0;
+    line-height: 1.3;
 }
 
 /* Description */
 .project-content p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-light);
-    margin-bottom: 0.8rem;
-    line-height: 1.3;
+    margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
 /* Links */
 .project-links {
+    margin-top: auto; /* Push links to bottom */
     display: flex;
-    gap: 0.5rem;
+    gap: 0.8rem;
+    flex-wrap: wrap;
 }
 
 .project-link {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
     background: var(--primary);
     color: white;
     border-radius: 6px;
     text-decoration: none;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .project-link:hover {
     background: var(--accent);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 footer {
@@ -404,6 +414,7 @@ footer {
     font-size: 1.8em;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -448,10 +459,16 @@ footer {
     
     .projects-grid {
         flex-direction: column;
+        align-items: center;
     }
     
     .project {
         width: 100%;
+        max-width: 450px;
+    }
+    
+    .project-preview {
+        padding-top: 56.25%; /* 16:9 aspect ratio for mobile */
     }
 }
 
@@ -472,6 +489,27 @@ footer {
     .floating-image {
         width: 80px;
         height: 80px;
+    }
+    
+    .project {
+        max-width: 100%;
+    }
+    
+    .project-content {
+        padding: 1.2rem;
+    }
+    
+    .project-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .project-content p {
+        font-size: 0.9rem;
+    }
+    
+    .project-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
     }
 }
 
