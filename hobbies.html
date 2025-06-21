@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites - Joyce Gill</title>
+    <link rel="stylesheet" href="portfolio.css?v=10">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .hobbies-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3em;
+            color: #2c3e50;
+            position: relative;
+            z-index: 10;
+            margin-top: 4em;
+        }
+
+        .section-header h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            color: #2c3e50 !important;
+            font-weight: 600;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        .section-header p {
+            color: #34495e !important;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1em;
+        }
+
+        .hobbies-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .hobbies-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            aspect-ratio: 1;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover .photo-overlay {
+            transform: translateY(0);
+        }
+
+        .photo-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .photo-location {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+
+        .nav-back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-back:hover {
+            color: #4A90E2;
+        }
+
+        @media (max-width: 1024px) {
+            .photo-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .dog-details {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .dog-title {
+                font-size: 2rem;
+            }
+
+            .dog-description {
+                font-size: 1.1rem;
+            }
+
+            .dog-section {
+                padding: 2em 1em;
+                margin: 3em 1em;
+            }
+
+            .dog-photo-container {
+                width: 250px;
+                height: 250px;
+            }
+
+            .carousel-arrow {
+                width: 35px;
+                height: 35px;
+            }
+
+            .prev-arrow {
+                left: -15px;
+            }
+
+            .next-arrow {
+                right: -15px;
+            }
+
+            .photo-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .travel-section {
+                padding: 2em 1em;
+                margin: 3em 1em;
+            }
+
+            .travel-title {
+                font-size: 2rem;
+            }
+
+            .travel-description {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Dog Section Styles */
+        .dog-section {
+            max-width: 1000px;
+            margin: 4em auto;
+            padding: 3em 2em;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .dog-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            font-size: 2em;
+            font-weight: 600;
+        }
+
+        .dog-description {
+            text-align: left;
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            max-width: 800px;
+        }
+
+        .dog-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: stretch;
+        }
+
+        .dog-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 400px;
+        }
+
+        .dog-info h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .dog-info ul {
+            list-style: none;
+            padding: 0;
+            flex-grow: 1;
+        }
+
+        .dog-info li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .dog-info li:last-child {
+            border-bottom: none;
+        }
+
+        .dog-info strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .dog-photos {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 400px;
+        }
+
+        .dog-photos h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .dog-carousel {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .carousel-arrow {
+            background: rgba(44, 62, 80, 0.8);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .carousel-arrow:hover {
+            background: rgba(44, 62, 80, 1);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .prev-arrow {
+            left: -20px;
+        }
+
+        .next-arrow {
+            right: -20px;
+        }
+
+        .dog-photo-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .dog-photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .dog-photo.active {
+            opacity: 1;
+        }
+
+        .dog-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dog-photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 20px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .dot.active {
+            background: #2c3e50;
+        }
+
+        .dot:hover {
+            background: #34495e;
+        }
+
+        /* Travel Section Styles */
+        .travel-section {
+            max-width: 1000px;
+            margin: 4em auto;
+            padding: 3em 2em;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .travel-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            font-size: 2em;
+            font-weight: 600;
+        }
+
+        .travel-description {
+            text-align: left;
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="media.html">Media & Teaching</a></li>
+            <li><a href="honors.html">Honors & Awards</a></li>
+            <li><a href="hobbies.html">Favorites</a></li>
+        </ul>
+    </nav>
+
+    <a href="index.html" class="nav-back">
+        <i class="fas fa-arrow-left"></i>
+        Back to Home
+    </a>
+
+    <div class="hobbies-container">
+        <div class="section-header">
+            <h2>Favorites</h2>
+        </div>
+
+        <div class="travel-section">
+            <h2 class="travel-title">Traveling</h2>
+            <p class="travel-description">I love love love traveling, taking pictures, and learning about new cultures! Here are some of my favorite memories:</p>
+
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="images/gallery1.jpg" alt="Baseball Game">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/gallery2.jpg" alt="Study Abroad">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/gallery3.jpg" alt="Ice Cream">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/gallery4.jpg" alt="New York">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/gallery5.jpg" alt="Museum">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/gallery6.jpg" alt="With Friend">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/community-ar.jpg" alt="Harlem Research">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/pioneer-mart.jpg" alt="Pioneer Mart">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/profile.jpg" alt="Travel Portrait">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/gallery1.jpg" alt="Sunset Baseball">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/gallery2.jpg" alt="European Adventure">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/gallery3.jpg" alt="Street Food">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/gallery4.jpg" alt="City Lights">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/gallery5.jpg" alt="Art & Culture">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/gallery6.jpg" alt="Mountain Adventures">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/community-ar.jpg" alt="Tech Innovation">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/pioneer-mart.jpg" alt="Startup Journey">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/gallery1.jpg" alt="Baseball Memories">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/gallery2.jpg" alt="Cultural Exchange">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+
+                <div class="photo-item">
+                    <img src="images/gallery3.jpg" alt="Sweet Adventures">
+                    <div class="photo-overlay">
+                        <div class="photo-title">placeholder</div>
+                        <div class="photo-location">placeholder</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dog-section">
+            <h2 class="dog-title">My Dog, Leo</h2>
+            <p class="dog-description">Meet Leo, my best friend! My dog brings me so much joy and is always there to brighten my day with unconditional love and endless energy.</p>
+            
+            <div class="dog-details">
+                <div class="dog-info">
+                    <h3>About Leo ⭐️</h3>
+                    <ul>
+                        <li><strong>Breed:</strong> Pomeranian</li>
+                        <li><strong>Birthday:</strong> January 2nd, 2020</li>
+                        <li><strong>Favorite Activities:</strong> Playing fetch, going on walks, playing with friends</li>
+                        <li><strong>Favorite Snacks:</strong> Carrots, broccoli, blueberries, and dental chews</li>
+                        <li><strong>Special Talents:</strong> He knows how to sit, stay, give his paw, and is bilingual (understands Korean and English)</li>
+                    </ul>
+                </div>
+                
+                <div class="dog-photos">
+                    <h3>Photo Gallery</h3>
+                    <div class="dog-carousel">
+                        <button class="carousel-arrow prev-arrow" onclick="changeDogPhoto(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="dog-photo-container">
+                            <div class="dog-photo active">
+                                <img src="images/dog1.jpg" alt="My dog">
+                            </div>
+                            <div class="dog-photo">
+                                <img src="images/dog2.jpg" alt="My dog">
+                            </div>
+                            <div class="dog-photo">
+                                <img src="images/dog3.jpg" alt="My dog">
+                            </div>
+                            <div class="dog-photo">
+                                <img src="images/dog4.jpg" alt="My dog">
+                            </div>
+                            <div class="dog-photo">
+                                <img src="images/dog5.jpg" alt="My dog">
+                            </div>
+                        </div>
+                        <button class="carousel-arrow next-arrow" onclick="changeDogPhoto(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="goToDogPhoto(0)"></span>
+                        <span class="dot" onclick="goToDogPhoto(1)"></span>
+                        <span class="dot" onclick="goToDogPhoto(2)"></span>
+                        <span class="dot" onclick="goToDogPhoto(3)"></span>
+                        <span class="dot" onclick="goToDogPhoto(4)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentDogPhoto = 0;
+        const dogPhotos = document.querySelectorAll('.dog-photo');
+        const dots = document.querySelectorAll('.dot');
+
+        function changeDogPhoto(direction) {
+            dogPhotos[currentDogPhoto].classList.remove('active');
+            dots[currentDogPhoto].classList.remove('active');
+            
+            currentDogPhoto += direction;
+            
+            if (currentDogPhoto >= dogPhotos.length) {
+                currentDogPhoto = 0;
+            } else if (currentDogPhoto < 0) {
+                currentDogPhoto = dogPhotos.length - 1;
+            }
+            
+            dogPhotos[currentDogPhoto].classList.add('active');
+            dots[currentDogPhoto].classList.add('active');
+        }
+
+        function goToDogPhoto(index) {
+            dogPhotos[currentDogPhoto].classList.remove('active');
+            dots[currentDogPhoto].classList.remove('active');
+            
+            currentDogPhoto = index;
+            
+            dogPhotos[currentDogPhoto].classList.add('active');
+            dots[currentDogPhoto].classList.add('active');
+        }
+    </script>
+</body>
+</html> 
