@@ -430,6 +430,12 @@
     </style>
 </head>
 <body>
+    <div class="hamburger-menu" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
     <nav>
         <ul>
             <li><a href="index.html#home">Home</a></li>
@@ -463,7 +469,7 @@
                         <li><strong>Birthday:</strong> January 2nd, 2020</li>
                         <li><strong>Favorite Activities:</strong> Playing fetch, going on walks, playing with friends</li>
                         <li><strong>Favorite Snacks:</strong> Carrots, broccoli, blueberries, and dental chews</li>
-                        <li><strong>Special Talents:</strong> He knows how to sit, stay, give his paw, and is bilingual (understands Korean and English)</li>
+                        <li><strong>Special Talents:</strong> Bilingual (Korean/English), Sit, Stay, Paw</li>
                     </ul>
                 </div>
                 
@@ -858,6 +864,24 @@
             dogPhotos[currentDogPhoto].classList.add('active');
             dots[currentDogPhoto].classList.add('active');
         }
+        
+        // Mobile hamburger menu
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const nav = document.querySelector('nav');
+        const navLinks = document.querySelectorAll('nav ul li a');
+        
+        hamburgerMenu.addEventListener('click', () => {
+            hamburgerMenu.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+        
+        // Close menu when a nav link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerMenu.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
     </script>
 </body>
 </html> 

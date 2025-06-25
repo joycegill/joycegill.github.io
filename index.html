@@ -9,6 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="hamburger-menu" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -159,6 +165,24 @@
       });
     }, { threshold: 0.15 });
     sections.forEach(section => observer.observe(section));
+    
+    // Mobile hamburger menu
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('nav ul li a');
+    
+    hamburgerMenu.addEventListener('click', () => {
+        hamburgerMenu.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
+    
+    // Close menu when a nav link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerMenu.classList.remove('active');
+            nav.classList.remove('active');
+        });
+    });
     </script>
 </body>
 </html> 
