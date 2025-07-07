@@ -594,6 +594,18 @@ footer {
     font-weight: 600;
 }
 
+/* Style all links in the About section to match the About Me title color */
+#about a {
+    color: #2f9fe4;
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+#about a:hover {
+    color: #1a7bb8; /* Darker shade of the primary color for hover effect */
+    text-decoration: underline;
+}
+
 /* --- MOBILE HAMBURGER MENU --- */
 .hamburger-menu {
     display: none;
