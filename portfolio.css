@@ -75,6 +75,23 @@ h1 {
     margin-bottom: 0.5em;
 }
 
+#home h1 {
+    font-weight: 700;
+}
+
+/* Smaller, centered GitHub buttons */
+.github-link {
+    font-size: 0.8em;
+    padding: 0.25em 0.5em;
+    min-width: 60px;
+    width: 50%;
+    align-self: center;
+}
+
+.project-links {
+    justify-content: center;
+}
+
 h2 {
     font-size: 1.8em;
     font-weight: 300;
@@ -304,7 +321,8 @@ h3 {
     text-align: center;
     margin-bottom: 3rem;
     color: var(--primary);
-    font-weight: 300;
+    font-size: 2em;
+    font-weight: 600;
     letter-spacing: -0.02em;
 }
 
@@ -392,21 +410,31 @@ h3 {
 .project-link {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
-    background: var(--primary);
-    color: white;
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
     border-radius: 6px;
     text-decoration: none;
     transition: all 0.3s ease;
     white-space: nowrap;
     flex: 1; /* Make buttons take equal space */
-    text-align: center; /* Center text in buttons */
-    min-width: 120px; /* Minimum width for buttons */
+    text-align: center;
+    min-width: 120px;
     font-weight: 300;
     letter-spacing: -0.02em;
 }
 
+/* Half-width GitHub button only for Minesweeper */
+.project-content .project-links .github-link {
+    width: 50%;
+    max-width: 240px;
+    display: block;
+    margin: 0 auto;
+}
+
+
 .project-link:hover {
-    background: var(--primary);
+    background: rgba(47,159,228,0.08);
     transform: translateY(-2px);
 }
 
@@ -621,7 +649,7 @@ footer {
     margin-bottom: 2rem;
     color: var(--primary);
     font-size: 2em;
-    font-weight: 300;
+    font-weight: 600;
     letter-spacing: -0.02em;
 }
 

@@ -7,12 +7,19 @@
     <link rel="stylesheet" href="portfolio.css?v=10">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.jpg" type="image/jpeg">
     <style>
         .hobbies-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
         }
+
+        /* Reorder: show Study Abroad above Dog */
+        .travel-section { order: 1; }
+        .dog-section { order: 2; }
 
         .section-header {
             text-align: center;
@@ -26,33 +33,37 @@
         .section-header h2 {
             font-size: 2.5em;
             margin-bottom: 0.5em;
-            color: #2c3e50 !important;
+            color: var(--primary);
             font-weight: 600;
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
+            letter-spacing: -0.02em;
         }
 
         .section-header p {
-            color: #34495e !important;
+            color: var(--text) !important;
             max-width: 600px;
             margin: 0 auto;
             font-size: 1.1em;
+            font-weight: 300;
+            letter-spacing: -0.02em;
         }
 
         .hobbies-title {
             text-align: center;
             font-size: 2.5rem;
             font-weight: 600;
-            color: #333;
+            color: var(--text);
             margin-bottom: 10px;
+            letter-spacing: -0.02em;
         }
 
         .hobbies-subtitle {
             text-align: center;
             font-size: 1.2rem;
-            color: #666;
+            color: var(--text);
+            opacity: 0.8;
             margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: -0.02em;
         }
 
         .photo-gallery {
@@ -107,11 +118,14 @@
             font-size: 0.9rem;
             font-weight: 600;
             margin-bottom: 3px;
+            letter-spacing: -0.02em;
         }
 
         .photo-location {
             font-size: 0.8rem;
             opacity: 0.9;
+            letter-spacing: -0.02em;
+            font-weight: 300;
         }
 
         .nav-back {
@@ -414,20 +428,26 @@
         .travel-title {
             text-align: center;
             margin-bottom: 2rem;
-            color: #2c3e50;
+            color: var(--primary);
             font-size: 2em;
             font-weight: 600;
+            letter-spacing: -0.02em;
         }
 
         .travel-description {
             text-align: left;
             font-size: 1.1rem;
-            color: #666;
+            color: var(--text);
             line-height: 1.6;
             margin-bottom: 3rem;
-            max-width: 800px;
+            max-width: 1000px; /* match section max width */
+            margin-left: auto;
+            margin-right: auto;
+            letter-spacing: -0.02em;
+            font-weight: 300;
         }
-    </style>
+
+</style>
 </head>
 <body>
     <div class="hamburger-menu" id="hamburger-menu">
@@ -441,7 +461,7 @@
             <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#about">About</a></li>
             <li><a href="index.html#projects">Projects</a></li>
-            <li><a href="honors.html">Honors, Awards & Media</a></li>
+            <li><a href="honors.html">Honors & Media</a></li>
             <li><a href="favorites.html">Favorites</a></li>
         </ul>
     </nav>
@@ -505,8 +525,8 @@
         </div>
 
         <div class="travel-section">
-            <h2 class="travel-title">Traveling</h2>
-            <p class="travel-description">I love traveling, taking pictures, and learning about new cultures! Here are some of my favorite memories, mostly from when I studied abroad:</p>
+            <h2 class="travel-title">Study Abroad</h2>
+            <p class="travel-description">I absolutely fell in love with traveling, taking pictures, and learning about new cultures. Shout out to Grinnell College's Scholarship and Financial Aid Department for making this possible. Here are some of my favorite memories:</p>
 
             <div class="photo-gallery">
                 <div class="photo-item">
