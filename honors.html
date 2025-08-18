@@ -12,14 +12,10 @@
 
     <style>
         :root {
-            --primary: #2c3e50;
-            --accent: #34495e;
-            --timeline: #85dcfc;
+            --primary: #2f9fe4;
             --text: #2c3e50;
-            --text-light: #34495e;
             --bg: #ffffff;
-            --bg-alt: #f8f9fa;
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition: 0.3s cubic-bezier(.4,0,.2,1);
         }
 
         .honors-section {
@@ -31,42 +27,38 @@
             position: relative;
             max-width: 800px;
             margin: 0 auto;
+            border-left: 2px solid rgba(44, 62, 80, 0.15);
+            padding-left: 24px;
         }
 
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--timeline);
-            opacity: 0.8;
-        }
+        .timeline::before { content: none; }
 
         .timeline-group {
             position: relative;
-            padding-left: 2em;
-            margin-bottom: 2em;
+            padding-left: 0;
+            margin-bottom: 1.75em;
         }
 
-        .timeline-group::before {
-            content: '';
-            position: absolute;
-            left: -5px;
-            top: 0.5em;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--timeline);
-            box-shadow: 0 0 0 4px rgba(176, 199, 227, 0.2);
-        }
+        .timeline-group::before { content: none; }
 
         .timeline-date {
-            font-weight: 600;
+            position: relative;
+            font-weight: 300;
+            letter-spacing: -0.02em;
             color: var(--primary);
-            margin-bottom: 1em;
-            font-size: 1.1em;
+            margin-bottom: 0.75em;
+            font-size: 1.0em;
+        }
+        .timeline-date::before {
+            content: '';
+            position: absolute;
+            left: -29px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary);
         }
 
         .timeline-item {
@@ -78,30 +70,30 @@
         }
 
         .timeline-content {
-            background: var(--bg);
-            padding: 1.5em;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(44, 62, 80, 0.08);
-            transition: var(--transition);
-            transform: translateX(0);
+            background: transparent;
+            padding: 0.4em 0 0.4em 0.6em;
+            border-radius: 0;
+            box-shadow: none;
+            border-left: 3px solid rgba(44, 62, 80, 0.15);
+            transition: color var(--transition), border-color var(--transition);
         }
 
         .timeline-content:hover {
-            transform: translateX(10px);
-            box-shadow: 0 6px 25px rgba(44, 62, 80, 0.12);
+            border-left-color: var(--primary);
         }
 
         .timeline-content p {
             margin: 0;
             color: var(--text);
-            font-weight: 500;
+            font-weight: 300;
+            letter-spacing: -0.02em;
         }
 
         .timeline-content .institution {
             font-size: 0.9em;
-            color: var(--accent);
-            margin-top: 0.5em;
-            font-weight: 500;
+            color: #6b7280;
+            margin-top: 0.25em;
+            font-weight: 300;
         }
 
         .section-header {
@@ -116,17 +108,20 @@
         }
 
         .section-header p {
-            color: var(--text-light);
+            color: var(--text);
             max-width: 600px;
             margin: 0 auto;
             font-size: 1.1em;
+            font-weight: 300;
+            letter-spacing: -0.02em;
         }
 
         .award-category {
             font-size: 0.9em;
-            color: var(--accent);
-            margin-top: 0.5em;
-            font-weight: 500;
+            color: #6b7280;
+            margin-top: 0.25em;
+            font-weight: 300;
+            letter-spacing: -0.02em;
         }
 
         .award-list {
@@ -140,6 +135,17 @@
         .award-list p:last-child {
             margin-bottom: 0;
         }
+
+        /* Match About section link styles */
+        .honors-section a {
+            color: #2f9fe4;
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+        .honors-section a:hover {
+            color: #1a7bb8;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -152,8 +158,9 @@
         <ul>
             <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#projects">Projects</a></li>
-            <li><a href="honors.html">Honors & Media</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="honors.html">Honors</a></li>
             <li><a href="favorites.html">Favorites</a></li>
         </ul>
     </nav>
@@ -167,19 +174,25 @@
                 <div class="timeline-date">2025</div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <p>NSF Research Experience for Undergraduates (REU) Fellowship</p>
+                        <p>WM H Killpack & Esther English Scholarship ($30,349)</p>
+                        <div class="publisher">Grinnell College, 2025-2026</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>NSF Research Experience for Undergraduates (REU) Fellowship ($7,400)</p>
                         <div class="publisher">Carnegie Mellon University</div>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <p>Computing Research Association (CRA) Undergrad Award</p>
+                        <p>Computing Research Association (CRA) Undergrad Award ($4,000)</p>
                         <div class="publisher">Last Mile Education</div>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <p>Schusterman Award</p>
+                        <p>Schusterman Award ($595)</p>
                         <div class="publisher">Last Mile Education</div>
                     </div>
                 </div>
@@ -189,20 +202,20 @@
                         <div class="publisher">Grinnell College</div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <p>Dean's List</p>
-                        <div class="publisher">Grinnell College</div>
-                    </div>
-                </div>
             </div>
 
             <div class="timeline-group">
                 <div class="timeline-date">2024</div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <p>Amazon Summer Undergraduate Research Experience (SURE) Fellowship</p>
+                        <p>Amazon SURE Research Fellowship ($7,500)</p>
                         <div class="publisher">Columbia University</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p>Off-Campus Study Scholarship ($256)</p>
+                        <div class="publisher">Grinnell College</div>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -229,32 +242,20 @@
                         <div class="publisher">Published by Grinnell College</div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <p>Dean's List</p>
-                        <div class="publisher">Grinnell College</div>
-                    </div>
-                </div>
             </div>
 
             <div class="timeline-group">
                 <div class="timeline-date">2023</div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <p>OCS Full-Year Scholarship Grant Recipient</p>
-                        <div class="institution">Grinnell College</div>
+                        <p>De Ette Gracey Scholarship ($58,200)</p>
+                        <div class="publisher">Grinnell College, 2023 - 2025</div>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <p>De Ette Gracey Scholarship</p>
-                        <div class="publisher">Grinnell College</div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <p>Perpetua Fund</p>
-                        <div class="publisher">Grinnell College</div>
+                        <p>Perpetua Fund ($11,100)</p>
+                        <div class="publisher">Grinnell College, 2023-2025</div>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -269,14 +270,14 @@
                 <div class="timeline-date">2022</div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <p>Founder's Scholar</p>
-                        <div class="publisher">Grinnell College</div>
+                        <p>Founder’s Merit Scholarship ($124,000)</p>
+                        <div class="publisher">Grinnell College, 2022-2025</div>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <p>Dean's List</p>
-                        <div class="publisher">Grinnell College</div>
+                        <p>Dean’s List</p>
+                        <div class="publisher">Grinnell College, 2022–2025</div>
                     </div>
                 </div>
                 <div class="timeline-item">

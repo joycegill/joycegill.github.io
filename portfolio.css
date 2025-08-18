@@ -49,6 +49,17 @@ nav ul li a:hover {
     color: var(--primary);
 }
 
+/* Base content link styles (use site blue; exclude button-like links) */
+section a:not(.project-link):not(.social-link):not(.email-link) {
+	color: var(--primary);
+	text-decoration: none;
+	transition: color var(--transition);
+}
+section a:not(.project-link):not(.social-link):not(.email-link):hover {
+	color: #1a7bb8;
+	text-decoration: underline;
+}
+
 section {
     max-width: 1000px;
     margin: 0.3em auto;
@@ -76,7 +87,7 @@ h1 {
 }
 
 #home h1 {
-    font-weight: 700;
+    font-weight: 300;
 }
 
 /* Smaller, centered GitHub buttons */
@@ -322,7 +333,7 @@ h3 {
     margin-bottom: 3rem;
     color: var(--primary);
     font-size: 2em;
-    font-weight: 600;
+    font-weight: 300;
     letter-spacing: -0.02em;
 }
 
@@ -643,13 +654,16 @@ footer {
 #about {
     scroll-margin-top: 80px;
 }
+#experience {
+    scroll-margin-top: 80px;
+}
 
-#about-title, #projects-title {
+#about-title, #projects-title, #experience-title {
     text-align: center;
     margin-bottom: 2rem;
     color: var(--primary);
     font-size: 2em;
-    font-weight: 600;
+    font-weight: 300;
     letter-spacing: -0.02em;
 }
 
@@ -766,4 +780,71 @@ footer {
   .nav-back:hover {
     color: #4A90E2;
   }
+} 
+
+/* Experience section */
+#experience {
+	max-width: 1000px;
+	margin: 0 auto 3rem auto;
+	padding: 0 2em;
+}
+.experience-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+.exp-item {
+	padding: 1rem 1rem 1rem 1.25rem;
+	border-left: 3px solid rgba(44, 62, 80, 0.15);
+}
+.exp-item:hover {
+	border-left-color: var(--primary);
+}
+.exp-header p {
+	margin: 0.1rem 0;
+	font-weight: 300;
+	letter-spacing: -0.02em;
+	color: var(--text);
+}
+.exp-body p {
+	margin: 0.25rem 0;
+	font-weight: 300;
+	letter-spacing: -0.02em;
+	color: var(--text);
+}
+@media (max-width: 768px) {
+	#experience { padding: 0 1em; }
+} 
+
+/* Experience dropdown (collapsible) */
+.exp-item .exp-header {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	gap: 0.15rem;
+	position: relative;
+}
+/* Show org line and job title when collapsed; hide the rest */
+.exp-item .exp-header p:nth-child(n+3),
+.exp-item .exp-body {
+	display: none;
+}
+.exp-item.open .exp-header p,
+.exp-item.open .exp-body {
+	display: block;
+}
+.exp-item .exp-header::after {
+	content: '▾';
+	position: absolute;
+	right: 0;
+	top: 0.25rem;
+	color: #6b7280;
+	transition: transform var(--transition), color var(--transition);
+}
+.exp-item.open .exp-header::after {
+	transform: rotate(180deg);
+	color: var(--primary);
+}
+.exp-item.open {
+	border-left-color: var(--primary);
 } 
