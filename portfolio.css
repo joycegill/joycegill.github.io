@@ -751,36 +751,7 @@ footer {
     }
 }
 
-@media (min-width: 769px) {
-  .nav-back {
-    display: none !important;
-  }
-}
 
-@media (max-width: 768px) {
-  .nav-back {
-    display: flex;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: var(--text);
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 300;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255,255,255,0.95);
-    padding: 8px 16px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    z-index: 1100;
-    transition: color 0.3s;
-    letter-spacing: -0.02em;
-  }
-  .nav-back:hover {
-    color: #4A90E2;
-  }
-} 
 
 /* Experience section */
 #experience {
@@ -811,6 +782,13 @@ footer {
 	font-weight: 300;
 	letter-spacing: -0.02em;
 	color: var(--text);
+}
+.exp-bullets {
+	padding-left: 1.25rem;
+	margin-left: 1.25rem;
+}
+.exp-body {
+	margin-top: 1rem;
 }
 @media (max-width: 768px) {
 	#experience { padding: 0 1em; }
