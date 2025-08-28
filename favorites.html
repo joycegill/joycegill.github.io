@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorites - Joyce Gill</title>
-    <link rel="stylesheet" href="portfolio.css?v=10">
+    <link rel="stylesheet" href="portfolio.css?v=3">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.jpg" type="image/jpeg">
@@ -25,27 +25,7 @@
 
         /* Reorder: show Study Abroad above Dog */
         .travel-section { order: 1; }
-        .dog-section { order: 2; }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 1.5em;
-        }
-
-        .section-header h2 {
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
-            color: #2c3e50;
-        }
-
-        .section-header p {
-            color: var(--text) !important;
-            max-width: 600px;
-            margin: 0 auto;
-            font-size: 1.1em;
-            font-weight: 300;
-            letter-spacing: -0.02em;
-        }
+        /* .dog-section { order: 2; } */
 
         .hobbies-title {
             text-align: center;
@@ -217,7 +197,7 @@
             }
         }
 
-        /* Dog Section Styles */
+        /* Dog Section Styles - Commented out to hide from website
         .dog-section {
             max-width: 1000px;
             margin: 4em auto;
@@ -242,30 +222,25 @@
         }
 
         .dog-description {
-            text-align: left;
+            text-align: center;
             font-size: 1.1rem;
-            color: #666;
+            color: var(--text);
             line-height: 1.6;
-            margin-bottom: 3rem;
-            max-width: 800px;
+            margin-bottom: 2rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+            padding-right: 0;
+            letter-spacing: -0.02em;
+            font-weight: 300;
         }
 
         .dog-details {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
-            align-items: stretch;
-        }
-
-        .dog-info {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 400px;
+            align-items: start;
         }
 
         .dog-info h3 {
@@ -279,18 +254,20 @@
         .dog-info ul {
             list-style: none;
             padding: 0;
-            flex-grow: 1;
         }
 
         .dog-info li {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #f0f0f0;
-            font-size: 1.1rem;
-            color: #555;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .dog-info li:last-child {
-            border-bottom: none;
+        .dog-info li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
         }
 
         .dog-info strong {
@@ -299,14 +276,7 @@
         }
 
         .dog-photos {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 400px;
+            text-align: center;
         }
 
         .dog-photos h3 {
@@ -323,30 +293,29 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 1rem;
-            flex-grow: 1;
         }
 
         .carousel-arrow {
-            background: rgba(44, 62, 80, 0.8);
-            color: white;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
             border: none;
             border-radius: 50%;
             width: 40px;
             height: 40px;
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            z-index: 10;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+            z-index: 2;
         }
 
         .carousel-arrow:hover {
-            background: rgba(44, 62, 80, 1);
-            transform: translateY(-50%) scale(1.1);
+            background: white;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
         }
 
         .prev-arrow {
@@ -358,26 +327,21 @@
         }
 
         .dog-photo-container {
-            position: relative;
             width: 300px;
             height: 300px;
-            overflow: hidden;
             border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
         }
 
         .dog-photo {
-            position: absolute;
-            top: 0;
-            left: 0;
+            display: none;
             width: 100%;
             height: 100%;
-            opacity: 0;
-            transition: opacity 0.5s ease;
         }
 
         .dog-photo.active {
-            opacity: 1;
+            display: block;
         }
 
         .dog-photo img {
@@ -386,32 +350,20 @@
             object-fit: cover;
         }
 
-        .dog-photo-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-            color: white;
-            padding: 20px;
-            font-size: 1rem;
-            font-weight: 300;
-        }
-
         .carousel-dots {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
             margin-top: 1rem;
         }
 
         .dot {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
-            background: #ccc;
+            background: #ddd;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: background-color 0.3s ease;
         }
 
         .dot.active {
@@ -419,8 +371,9 @@
         }
 
         .dot:hover {
-            background: #34495e;
+            background: #999;
         }
+        */
 
         /* Travel Section Styles */
         .travel-section {
@@ -458,7 +411,19 @@
             font-weight: 300;
         }
 
-</style>
+        /* Ensure section header styling */
+        #favorites-title {
+            text-align: center !important;
+            color: #2f9fe4 !important;
+            font-size: 2em !important;
+            font-weight: 300 !important;
+            letter-spacing: -0.02em !important;
+            margin-bottom: 2rem !important;
+        }
+
+        .hobbies-title {
+        }
+    </style>
 </head>
 <body>
     <div class="hamburger-menu" id="hamburger-menu">
@@ -479,10 +444,9 @@
     </nav>
 
     <div class="hobbies-container">
-        <div class="section-header">
-            <h2>Favorites</h2>
-        </div>
+        <h2 id="favorites-title">Favorites</h2>
 
+        <!-- Dog Section - Commented out to hide from website
         <div class="dog-section">
             <h2 class="dog-title">My Dog, Leo</h2>
             
@@ -535,6 +499,7 @@
                 </div>
             </div>
         </div>
+        -->
 
         <div class="travel-section">
             <h2 class="travel-title">Study Abroad</h2>
@@ -860,6 +825,8 @@
     </div>
 
     <script>
+        // Dog Section JavaScript - Commented out to hide from website
+        /*
         let currentDogPhoto = 0;
         const dogPhotos = document.querySelectorAll('.dog-photo');
         const dots = document.querySelectorAll('.dot');
@@ -889,6 +856,7 @@
             dogPhotos[currentDogPhoto].classList.add('active');
             dots[currentDogPhoto].classList.add('active');
         }
+        */
         
         // Mobile hamburger menu
         const hamburgerMenu = document.getElementById('hamburger-menu');
