@@ -8,6 +8,75 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.jpg" type="image/jpeg">
+    <style>
+        #experience {
+            display: none !important;
+        }
+        
+        .video-container {
+            max-width: 800px;
+            margin: 3em auto 0;
+            padding: 0 20px;
+            text-align: center;
+        }
+        
+        .video-description {
+            max-width: 800px;
+            margin: 2em auto 0;
+            padding: 1.5em 2em;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #2f9fe4;
+        }
+        
+        .video-description p {
+            margin: 0;
+            color: #2c3e50;
+            line-height: 1.7;
+            font-size: 1rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+        
+        .video-container iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .video-description {
+                padding: 1.2em 1.5em;
+                margin: 2em auto 0;
+            }
+            
+            .video-description p {
+                font-size: 0.95rem;
+            }
+            
+            .video-container iframe {
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .video-description {
+                padding: 1em 1.2em;
+                margin: 1.5em auto 0;
+            }
+            
+            .video-description p {
+                font-size: 0.9rem;
+            }
+            
+            .video-container iframe {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="hamburger-menu" id="hamburger-menu">
@@ -20,7 +89,6 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="honors.html">Honors</a></li>
             <li><a href="travel.html">Travel</a></li>
@@ -78,9 +146,26 @@
       
             <p>I previously worked at <a href="https://www.engineering.columbia.edu/" target="_blank">Columbia University</a> through the <a href="https://www.amazon.science/academic-engagements/columbia-engineering-and-amazon-launch-undergraduate-program-to-increase-diversity-and-inclusiveness-in-tech-fields" target="_blank">Amazon Summer Research (SURE) Program</a>. I worked with Professor Brian Smith's Computer-Enabled Abilities Lab (CEAL) to explore how augmented reality (AR) can be used to combat gentrification and preserve oral history in Harlem, New York.</p>
 
-            <p>My research interests lie at the intersection of human-AI interaction, computer science education, learning sciences, hybrid intelligence, social computing, and design.</p>
+            <p>My research interests lie at the intersection of human-AI interaction, computer science education, learning sciences, artificial intelligence, and design.</p>
 
             <p>A little bit more about me: I was born and raised in Seoul, South Korea, and my family is from Omaha, Nebraska. In my free time, I enjoy hiking, traveling, going on very long walks, and spending time with my friends, family, and dog. Check out my 'Travel' page for more!</p>
+        </div>
+        
+        <div class="video-container">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/g7bS59_iVTE" 
+                title="Joyce Gill - Grinnell College Information Session" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        
+        <div class="video-description">
+            <p>During my second year of undergrad, I had the honor of being selected to co-host the Grinnell College Information Session, which is filmed once every ~5 years. This was a huge honor for me, as I was the youngest ambassador in Grinnell's history to be given this opportunity (this role has traditionally been reserved for seniors).
+            While I was super nervous and have changed a lot since, I am so proud to have represented my college. Feel free to watch!</p>
         </div>
     </section>
 
