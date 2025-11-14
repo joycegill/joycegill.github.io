@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boyfriend - Joyce Gill</title>
+    <link rel="stylesheet" href="portfolio.css?v=3">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.jpg" type="image/jpeg">
+    <style>
+        #boyfriend-title {
+            text-align: center !important;
+            color: #2f9fe4 !important;
+            font-size: 2em !important;
+            font-weight: 300 !important;
+            letter-spacing: -0.02em !important;
+            margin-bottom: 2rem !important;
+        }
+        
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2em;
+            text-align: center;
+        }
+        
+        .content-container p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #2c3e50;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+    </style>
+</head>
+<body>
+    <div class="hamburger-menu" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="honors.html">Honors</a></li>
+            <li><a href="travel.html">Travel</a></li>
+        </ul>
+    </nav>
+
+    <section id="boyfriend" class="visible">
+        <h2 id="boyfriend-title">Boyfriend</h2>
+        <div class="content-container">
+            <p>The most beautiful smart nice perfect boyfie, I'm so grateful to have you. I'll be updating this soon with all of our favoritest favoritest memories. But in the meantime, I love you so so much and thanks for being so patient and supportive. To us &lt;33</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Joyce Gill. All rights reserved.</p>
+    </footer>
+
+    <script>
+    // Section fade-in on scroll
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+    
+    // Mobile hamburger menu
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('nav ul li a');
+    
+    hamburgerMenu.addEventListener('click', () => {
+        hamburgerMenu.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
+    
+    // Close menu when a nav link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerMenu.classList.remove('active');
+            nav.classList.remove('active');
+        });
+    });
+    </script>
+</body>
+</html>
+
