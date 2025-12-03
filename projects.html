@@ -8,6 +8,26 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="icon" href="images/favicon.jpg" type="image/jpeg">
+	<style>
+		/* Specific styling for CMU HCII REU project links */
+		.project-link-paper {
+			flex: 2 1 auto;
+			min-width: 200px;
+			max-width: none;
+		}
+		
+		.project-link-poster {
+			flex: 0 1 auto;
+			min-width: 100px;
+			max-width: 150px;
+		}
+		
+		/* Ensure the project-links container uses flexbox */
+		.project-links {
+			display: flex !important;
+			gap: 0.8rem;
+		}
+	</style>
 </head>
 <body>
 	<div class="hamburger-menu" id="hamburger-menu">
@@ -34,12 +54,11 @@
 				</div>
 				<div class="project-content">
 					<h3>Data Science Research @ Grinnell College</h3>
-					<p><strong>Gill, J.</strong>, Do, K., Rebelsky, W., (2025). College Navigator: Exploring U.S. Colleges with R Shiny. <em>Midstates Consortium for Physical Sciences, Mathematics, and Computer Science at the University of Chicago.
-					</em></p>
-					<p><strong>Gill, J.</strong>, Do, K., Rebelsky, W., (2025). College Navigator: Exploring U.S. Colleges with R Shiny. <em>ACM-W MINK-WIC Conference Poster Session.</em></p>
+					<p><strong>Joyce Gill</strong>, Khanh Do, William Rebelsky. "College Navigator: An Interactive R Shiny Application for Transparent and Evidence-Based Decision-Making." </p>
+					<p>Presented at: (1) Midstates Consortium for Mathematics and Computer Science at the University of Chicago [Poster], (2) ACM-W MINK-WIC [Poster].</p>
 					<div class="project-links">
+						<a href="documents/College Navigator.pdf" class="project-link" target="_blank">Poster</a>
 						<a href="documents/Abstract_Khanh_Joyce_Grinnell.pdf" class="project-link" target="_blank">Abstract</a>
-						<a href="https://khanhdo05.shinyapps.io/college-navigator-1/" class="project-link" target="_blank">Website</a>
 					</div>
 				</div>
 			</div>
@@ -48,14 +67,14 @@
 					<img src="images/cmu-reu-poster.jpg" alt="CMU HCII REU Research Poster Preview">
 				</div>
 				<div class="project-content">
-					<h3>NSF REU Program @ CMU HCII</h3>
-					<p><strong>Joyce Gill,</strong> Michael W. Asher, and Paulo F. Carvalho. 2026. Investigating
+					<h3>Research @ CMU HCII NSF REU Program</h3>
+					<p><strong>Joyce Gill,</strong> Michael Asher, Paulo Carvalho. "Investigating
 						the Efficacy of Mastery-Based Tests in Fostering Effective Self-Regulated
-						Learning Behaviors in CS1 Courses. <em>In Proceedings of the ACM SIGCSE TS 26 [In Press].</em></p>
-					<p>Presented at: (1) CMU HCII Research Symposium, (2) Grinnell College Computer Science Honors Poster Session, (3) ACM-W MINK-WIC Conference Undergraduate Research Talk.</p>
+						Learning Behaviors in CS1 Courses."</p>
+					<p>Presented at: (1) CMU HCII Research Symposium [Poster], (2) Grinnell College Computer Science Honors Candidate Symposium[Poster], (3) ACM-W MINK-WIC [Research Talk].</p>
 					<div class="project-links">
-						<a href="documents/cmu-reu-poster.pdf" class="project-link" target="_blank">Poster</a>
-						<a href="https://glacier.andrew.cmu.edu/olisrl/index_csprinciples_landing.html" class="project-link" target="_blank">Experiment</a>
+						<a href="documents/cmu-hcii-paper.pdf" class="project-link project-link-paper" target="_blank">Paper [In Press at ACM SIGCSE TS'26]</a>
+						<a href="documents/cmu-reu-poster.pdf" class="project-link project-link-poster" target="_blank">Poster</a>
 					</div>
 				</div>
 			</div>
@@ -65,7 +84,7 @@
 				</div>
 				<div class="project-content">
 					<h3>Biostatistics Research Paper @ USCLAP</h3>
-					<p><strong>Gill, J.,</strong> Wells, J., (2025). Modeling Thyroid Cancer Recurrence: A Multiple Logistic Regression Approach. <em>Consortium for the Advancement of Undergraduate Statistics Education (CAUSE), USCLAP,</em> [Under Review].</p>
+					<p><strong>Joyce Gill,</strong> Jonathan Wells. "Modeling Thyroid Cancer Recurrence: A Multiple Logistic Regression Approach." <em>Consortium for the Advancement of Undergraduate Statistics Education (CAUSE), USCLAP</em> [Under Review].</p>
 					<div class="project-links">
 						<a href="documents/Gill-USCLAP.pdf" class="project-link" target="_blank">Paper</a>
 						<a href="https://github.com/joycegill/Thyroid-Cancer-Recurrence-Prediction" class="project-link" target="_blank">GitHub</a>
@@ -90,12 +109,12 @@
 					<img src="images/community-ar.jpg" alt="AR Project Preview">
 				</div>
 				<div class="project-content">
-					<h3>Research @ Columbia-Amazon SURE Program</h3>
-					<p><strong>Gill, J.,</strong> DiSalvo, L., Smith, B., (2024). Leveraging Augmented Reality to Preserve Community History. <em>Columbia-Amazon SURE Research Symposium.</em></p>
-					<p><strong>Gill, J.,</strong> DiSalvo, L., Smith, B., (2025). Leveraging Augmented Reality to Preserve Community History. <em>Grinnell College Computer Science Poster Session.</em></p>
+					<h3>Research @ Amazon-Columbia SURE Program</h3>
+					<p><strong>Joyce Gill,</strong> Lisa-Maria DiSalvo, Brian Smith. "Leveraging Augmented Reality to Preserve Community History."</p>
+					<p>Presented at: (1) Amazon-Columbia SURE Research Symposium [Poster], (2) Grinnell College Computer Science Poster Session [Poster].</p>
 					<div class="project-links">
 						<a href="documents/community-ar-poster.pdf" class="project-link" target="_blank">Poster</a>
-						<a href="documents/community-ar-paper.pdf" class="project-link" target="_blank">Paper</a>
+						<a href="documents/community-ar-paper.pdf" class="project-link" target="_blank">Report</a>
 					</div>
 				</div>
 			</div>
@@ -106,8 +125,7 @@
 				<div class="project-content">
 					<h3>Intern @ Korea Business Competition</h3>
 					<p>Designed and developed the organization's website.</p>
-					<p>Previously competition participant: Won Best Speaker Award (2021) and Semi Finalist Team (2019)</p>
-					<p></p>
+					<p>Previously competition participant: Won Best Speaker Award (2021) and Semi Finalist Team (2019).</p>
 					<p></p>
 					<p></p>
 					<p></p>
