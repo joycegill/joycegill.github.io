@@ -76,6 +76,110 @@
                 height: 200px;
             }
         }
+        
+        /* Ensure hamburger menu shows on mobile for index.html */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: flex !important;
+            }
+        }
+        
+        /* Mobile responsive floating gallery */
+        @media (max-width: 900px) {
+            .floating-gallery {
+                width: 280px;
+                height: 224px;
+            }
+            
+            .floating-image {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .profile-image.main {
+                width: 20vw;
+                height: 20vw;
+                max-width: 120px;
+                max-height: 120px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                gap: 4em;
+            }
+            
+            .floating-gallery {
+                width: 250px;
+                height: 200px;
+                margin-bottom: 2em;
+            }
+            
+            .text-content {
+                margin-top: 2em;
+            }
+            
+            .floating-image {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .profile-image.main {
+                width: 18vw;
+                height: 18vw;
+                max-width: 100px;
+                max-height: 100px;
+            }
+            
+            #home {
+                padding-bottom: 1em;
+                margin-bottom: 0;
+            }
+            
+            #about {
+                margin-top: 0;
+                padding-top: 1em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .profile-container {
+                gap: 3em;
+            }
+            
+            .floating-gallery {
+                width: 220px;
+                height: 176px;
+                margin-bottom: 1.5em;
+            }
+            
+            .text-content {
+                margin-top: 1.5em;
+            }
+            
+            .floating-image {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .profile-image.main {
+                width: 15vw;
+                height: 15vw;
+                max-width: 80px;
+                max-height: 80px;
+            }
+            
+            #home {
+                padding-bottom: 0.5em;
+                margin-bottom: 0;
+            }
+            
+            #about {
+                margin-top: 0;
+                padding-top: 0.5em;
+            }
+        }
     </style>
 </head>
 <body>

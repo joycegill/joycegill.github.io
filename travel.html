@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.jpg" type="image/jpeg">
     <style>
-        /* Page-wide typography to match Favorites header */
         body {
             font-family: 'Poppins', sans-serif;
             font-weight: 300;
@@ -23,179 +22,8 @@
             flex-direction: column;
         }
 
-        /* Reorder: show Study Abroad above Dog */
         .travel-section { order: 1; }
         /* .dog-section { order: 2; } */
-
-        .hobbies-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 10px;
-            letter-spacing: -0.02em;
-        }
-
-        .hobbies-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: var(--text);
-            opacity: 0.8;
-            margin-bottom: 40px;
-            font-weight: 300;
-            letter-spacing: -0.02em;
-        }
-
-        .photo-gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-top: 40px;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .photo-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            aspect-ratio: 1;
-        }
-
-        .photo-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .photo-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .photo-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .photo-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-            color: white;
-            padding: 20px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-
-        .photo-item:hover .photo-overlay {
-            transform: translateY(0);
-        }
-
-        .photo-title {
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 3px;
-            letter-spacing: -0.02em;
-        }
-
-        .photo-location {
-            font-size: 0.8rem;
-            opacity: 0.9;
-            letter-spacing: -0.02em;
-            font-weight: 300;
-        }
-
-        .nav-back {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            color: #333;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: color 0.3s ease;
-        }
-
-        .nav-back:hover {
-            color: #4A90E2;
-        }
-
-        @media (max-width: 1024px) {
-            .photo-gallery {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .dog-details {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .dog-title {
-                font-size: 2rem;
-            }
-
-            .dog-description {
-                font-size: 1.1rem;
-            }
-
-            .dog-section {
-                padding: 2em 1em;
-                margin: 3em 1em;
-            }
-
-            .dog-photo-container {
-                width: 250px;
-                height: 250px;
-            }
-
-            .carousel-arrow {
-                width: 35px;
-                height: 35px;
-            }
-
-            .prev-arrow {
-                left: -15px;
-            }
-
-            .next-arrow {
-                right: -15px;
-            }
-
-            .photo-gallery {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-
-            .travel-section {
-                padding: 2em 1em;
-                margin: 3em 1em;
-            }
-
-            .travel-title {
-                font-size: 2rem;
-            }
-
-            .travel-description {
-                font-size: 1.1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .photo-gallery {
-                grid-template-columns: 1fr;
-            }
-        }
 
         /* Dog Section Styles - Commented out to hide from website
         .dog-section {
@@ -375,6 +203,159 @@
         }
         */
 
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            aspect-ratio: 1;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover .photo-overlay {
+            transform: translateY(0);
+        }
+
+        .photo-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 3px;
+            letter-spacing: -0.02em;
+        }
+
+        .photo-location {
+            font-size: 0.8rem;
+            opacity: 0.9;
+            letter-spacing: -0.02em;
+            font-weight: 300;
+        }
+
+        .nav-back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-back:hover {
+            color: #4A90E2;
+        }
+
+        @media (max-width: 1024px) {
+            .photo-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Dog Section Styles - Commented out
+            .dog-details {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .dog-title {
+                font-size: 2rem;
+            }
+
+            .dog-description {
+                font-size: 1.1rem;
+            }
+
+            .dog-section {
+                padding: 2em 1em;
+                margin: 3em 1em;
+            }
+
+            .dog-photo-container {
+                width: 250px;
+                height: 250px;
+            }
+
+            .carousel-arrow {
+                width: 35px;
+                height: 35px;
+            }
+
+            .prev-arrow {
+                left: -15px;
+            }
+
+            .next-arrow {
+                right: -15px;
+            }
+            */
+
+            .photo-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .travel-section {
+                padding: 2em 1em;
+                margin: 3em 1em;
+            }
+
+            .travel-title {
+                font-size: 2rem;
+            }
+
+            .travel-description {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Travel Section Styles */
         .travel-section {
             max-width: 1000px;
@@ -421,8 +402,6 @@
             margin-bottom: 2rem !important;
         }
 
-        .hobbies-title {
-        }
     </style>
 </head>
 <body>
@@ -809,8 +788,8 @@
                 <div class="photo-item">
                     <img src="images/gallery39.jpg" alt="Downtown Pittsburg">
                     <div class="photo-overlay">
-                        <div class="photo-title">Pittsburgh, PA</div>
-                        <div class="photo-location">Downtown Pittsburgh</div>
+                        <div class="photo-title">Bronx, NY</div>
+                        <div class="photo-location">New York Yankees Stadium</div>
                     </div>
                 </div>
 

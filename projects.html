@@ -22,10 +22,30 @@
 			max-width: 150px;
 		}
 		
-		/* Ensure the project-links container uses flexbox */
 		.project-links {
 			display: flex !important;
-			gap: 0.8rem;
+		}
+		
+		/* Mobile view: Stack all project buttons vertically with equal size */
+		@media (max-width: 768px) {
+			.project-link {
+				flex: 1 1 100%;
+				min-width: 100%;
+				max-width: 100%;
+				width: 100%;
+			}
+			
+			.project-link-paper,
+			.project-link-poster {
+				flex: 1 1 100%;
+				min-width: 100%;
+				max-width: 100%;
+				width: 100%;
+			}
+			
+			.project-links {
+				flex-direction: column !important;
+			}
 		}
 	</style>
 </head>
