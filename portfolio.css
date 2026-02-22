@@ -86,11 +86,17 @@ section a:not(.project-link):not(.social-link):not(.email-link):hover {
 #news a:not(.project-link):not(.social-link):not(.email-link) {
 	color: #000;
 	text-decoration: none;
+	transition: color var(--transition);
 }
 #home a:not(.project-link):not(.social-link):not(.email-link):hover,
 #news a:not(.project-link):not(.social-link):not(.email-link):hover {
-	color: #000;
+	color: var(--primary) !important;
 	text-decoration: none;
+}
+
+#home a.grinnell-link:hover,
+#news a.grinnell-link:hover {
+	color: rgba(47, 159, 228, 0.6) !important;
 }
 
 section {
@@ -735,7 +741,7 @@ footer {
 #news-title {
     text-align: left;
     margin-bottom: 1.25rem;
-    color: #000;
+    color: var(--primary);
     font-size: 1.25em;
     font-weight: 300;
     letter-spacing: -0.02em;
