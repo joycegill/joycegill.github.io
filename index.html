@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joyce Gill</title>
-    <link rel="stylesheet" href="portfolio.css?v=3">
+    <link rel="stylesheet" href="portfolio.css?v=4">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.jpg" type="image/jpeg">
     <style>
-        #experience {
-            display: none !important;
-        }
-        
         .video-container {
             max-width: 800px;
             margin: 3em auto 0;
@@ -90,6 +86,13 @@
                 width: 280px;
                 height: 224px;
             }
+            .home-bio {
+                min-height: 224px;
+            }
+            .text-content {
+                height: 224px;
+                min-height: 224px;
+            }
             
             .floating-image {
                 width: 120px;
@@ -115,8 +118,12 @@
                 height: 200px;
                 margin-bottom: 2em;
             }
-            
+            .home-bio {
+                min-height: 200px;
+            }
             .text-content {
+                height: 200px;
+                min-height: 200px;
                 margin-top: 2em;
             }
             
@@ -137,10 +144,6 @@
                 margin-bottom: 0;
             }
             
-            #about {
-                margin-top: 0;
-                padding-top: 1em;
-            }
         }
         
         @media (max-width: 480px) {
@@ -153,8 +156,12 @@
                 height: 176px;
                 margin-bottom: 1.5em;
             }
-            
+            .home-bio {
+                min-height: 176px;
+            }
             .text-content {
+                height: 176px;
+                min-height: 176px;
                 margin-top: 1.5em;
             }
             
@@ -175,10 +182,6 @@
                 margin-bottom: 0;
             }
             
-            #about {
-                margin-top: 0;
-                padding-top: 0.5em;
-            }
         }
     </style>
 </head>
@@ -192,10 +195,10 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="honors.html">Honors</a></li>
             <li><a href="travel.html">Travel</a></li>
+            <li class="nav-icon"><a href="mailto:joyceygill@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a></li>
+            <li class="nav-icon"><a href="https://www.linkedin.com/in/joycegill/" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+            <li class="nav-icon"><a href="https://github.com/joycegill" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a></li>
         </ul>
     </nav>
 
@@ -227,266 +230,30 @@
 
             <div class="text-content">
                 <h1>Hello World, I'm Joyce! 👋</h1>
-                <div class="connect">
-                <a href="mailto:gilljoyc@grinnell.edu" class="email-link">gilljoyc@grinnell.edu</a>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/joycegill/" target="_blank" class="social-link" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/joycegill" target="_blank" class="social-link" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
+                <div class="home-bio">
+                    <p>I am an incoming PhD student studying human-AI interaction and education.</p>
+                    <p>I am currently a senior at Grinnell College, working towards my Bachelor's in Computer Science with concentrations in Statistics/Data Science and Digital Studies (Expected May 2026).</p>
+                    <p>Previously, I interned at Carnegie Mellon University's Human-Computer Interaction Institute, Columbia University, Amazon, and three startups.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about">
-        <h2 id="about-title">About Me</h2>
-        <div class="about-content">
-            <p>My name is Joyce Gill and I am a senior at <a href="https://www.grinnell.edu/" target="_blank">Grinnell College</a> majoring in Computer Science with concentrations in Statistics/Data Science and Digital Studies. At Grinnell, I am currently working as a Human-AI Interaction researcher under Professor Sarah Purcell, Statistics Researcher under Professor Shonda Kuiper, and Lead Instructor at the Grinnell Middle School.</p>
-
-            <p>This past summer, I worked at <a href="https://hcii.cmu.edu/" target="_blank">Carnegie Mellon University's Human-Computer Interaction Institute (HCII)</a> through the <a href="https://hcii.cmu.edu/summer-research-program" target="_blank">NSF REU Program</a>. I worked under Professor Paulo Carvalho to investigate the efficacy of mastery-based testing in fostering effective self-regulated learning behaviors in CS1 courses.</p>
-      
-            <p>I previously worked at <a href="https://www.engineering.columbia.edu/" target="_blank">Columbia University</a> through the <a href="https://www.amazon.science/academic-engagements/columbia-engineering-and-amazon-launch-undergraduate-program-to-increase-diversity-and-inclusiveness-in-tech-fields" target="_blank">Amazon Summer Research (SURE) Program</a>. I worked under Professor Brian A. Smith to explore how augmented reality (AR) can be used to combat gentrification and preserve oral history in Harlem, New York.
-            I’ve also completed one software engineering and two UI/UX internships at startups.</p>
-
-            <p>My research interests lie at the intersection of human-AI interaction and education. I am also an incoming PhD student!! More details coming soon.</p>
-
-            <p>A little bit more about me: I was born and raised in Seoul, South Korea, and my family is from Omaha, Nebraska. In my free time, I enjoy hiking, traveling, going on very long walks, and spending time with my friends, family, and dog.</p>
-        </div>
-        
-        <div class="video-container">
-            <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/g7bS59_iVTE" 
-                title="Joyce Gill - Grinnell College Information Session" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen>
-            </iframe>
-        </div>
-        
-        <div class="video-description">
-            <p>During my second year of undergrad, I had the privilege of being selected to co-host the Grinnell College Information Session, which is filmed once every ~5 years. This was a huge honor for me, as I was the youngest student in Grinnell's history to be given this opportunity (this role has traditionally been reserved for seniors).
-            While I was super nervous and have changed a lot since, I am so proud to have represented my college. Feel free to watch!</p>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2 id="experience-title">Experience</h2>
-        <div class="experience-list">
-            <div class="exp-item">
-                <div class="exp-header">
-                    <p><strong>Carnegie Mellon University, Human-Computer Interaction Institute</strong> — 2025–Present</p>
-                    <p>Undergraduate Researcher | NSF Research Experience for Undergraduates (REU) Program</p>
-
-                </div>
-                <div class="exp-body">
-                    <ul class="exp-bullets">
-                        <li>Professor Paulo F. Carvalho’s Optimized Algorithms & Knowledge (OAK) Lab.</li>
-                        <li><strong>Project 1</strong>: Investigating the efficacy of mastery-based testing in fostering effective self-regulated learning behaviors in introductory programming courses.
-                            <ul class="exp-bullets">
-                                <li>Led pilot study and end-to-end research lifecycle (experimental design, usability testing, data collection/processing/analysis, co-authoring paper)</li>
-                                <li>Designed and built an introductory Python course</li>
-                            </ul>
-                        </li>
-                        <li><strong>Project 2</strong>: Two-year study analyzing the long-term effects of mastery-based testing on student performance and retention across the General Chemistry I and II sequence.
-                            <ul class="exp-bullets">
-                                <li>Developed statistical models (linear/logistic regression) and performed data cleaning and analysis</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+    <section id="news" class="visible">
+        <h2 id="news-title">News</h2>
+        <div class="news-list">
+            <div class="news-item">
+                <span class="news-date">February 2026</span>
+                <p class="news-text">Traveling to St. Louis, Missouri to present my first-author paper at ACM SIGCSE TS'26.</p>
             </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <p><strong>Grinnell College, Department of Digital Studies</strong> — 2025–Present</p>
-                    <p>Independent Research Project</p>
-                </div>
-                <div class="exp-body">
-                    <ul class="exp-bullets">
-                        <li>Advised by Professor Sarah J. Purcell.</li>
-                        <li>Human-AI Collaboration (more details coming soon).</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <p><strong>Grinnell Middle School, Introduction to Computer Science Course</strong> — 2025-Present</p>
-                    <p>Lead Instructor | 40 students</p>
-                </div>
-                <div class="exp-body">
-                    <ul class="exp-bullets">
-                        <li>Designed a mentor-apprentice training model, successfully training over 10 instructional facilitators to ensure the program continues beyond my graduation.</li>
-                        <li>Institutionalized the program's future by turning it from a volunteer-run program to a paid work-study position through Grinnell College.</li>
-                        <li>Teaching middle school students data types, Spheros, mBots, and type-based programming.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <p><strong>Grinnell College Office of Admissions</strong> — 2023–Present</p>
-                    <p>Admissions Tour Guide & Information Session Co-Host</p>
-                </div>
-                <div class="exp-body">
-                    <ul class="exp-bullets">
-                        <li>Selected as the youngest <a href="https://www.youtube.com/watch?v=g7bS59_iVTE" target="_blank">information-session co-host</a> in Grinnell College’s history</li>
-                        <li>Received offer to be a Senior Interviewer as a sophomore</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <p><strong>Grinnell College, Department of Computer Science</strong> — 2025–2025</p>
-                    <p>Research Assistant | <a href="https://nairrpilot.org/projects/expansion/fa2-4y" target="_blank">NSF National Artificial Intelligence Research Resource (NAIRR) Pilot Expansion Project</a> to advance AI education at four-year institutions.</p>
-                </div>
-                <div class="exp-body">
-                    <ul class="exp-bullets">
-                        <li>Under Professor Jerod Weinman</li>
-                        <li>Cleaned, processed, and analyzed data to identify the latest AI trends and develop strategies for integrating AI into undergraduate CS curricula.</li>
-                    </ul>
-                </div>
-            </div>
-
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <p><strong>Grinnell Middle School, Introduction to Computer Science Course</strong> — 2025-2025</p>
-                    <p>Instructional Coordinator | 15 students</p>
-                </div>
-                <div class="exp-body">
-                    <ul class="exp-bullets">
-                        <li>Teaching data types, mBots, and type-based programming.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <p><strong>Columbia University, Department of Computer Science</strong> — 2024–2024</p>
-                    <p>Undergraduate Researcher | Amazon Science Summer Undergraduate Research Experience (SURE) Program</p>
-                </div>
-                <div class="exp-body">
-                    <ul class="exp-bullets">
-                        <li>Professor Brian A. Smith’s Computer-Enabled Abilities Lab (CEAL)</li>
-                        <li><strong>Project 1 — Community AR</strong>: Exploring how AR can be used to combat gentrification and preserve oral history in Harlem, New York.
-                            <ul class="exp-bullets">
-                                <li>Led pilot study.</li>
-                                <li>Designed and prototyped an interactive AR “page flip” feature using Unity and Figma.</li>
-                                <li>Conducted mixed-methods research, including field studies, usability testing, and archival research.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Project 2 — TeLLMe</strong>: Making NYC Open Data more accessible for non-expert audiences by using LLMs to contextualize datasets
-                            <ul class="exp-bullets">
-                                <li>Led the end-to-end UI/UX design process (brainstorming, wireframing, prototyping).</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <p><strong>Grinnell Middle School, Introduction to Computer Science Course</strong> — 2024-2024</p>
-                    <p>Instructional Facilitator | 13 students</p>
-                </div>
-                <div class="exp-body">
-                    <ul class="exp-bullets">
-                        <li>Teaching data types, Sphero Robots, and block-based programming.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <p><strong>Grinnell College, CSC 208 — Discrete Mathematics Course</strong> — 2024-2024</p>
-                    <p>Course Mentor | 40 students</p>
-                </div>
-                <div class="exp-body">
-                    <ul class="exp-bullets">
-                        <li>Under Professor Eric Autry</li>
-                        <li>Achieved a perfect 10/10 mentor satisfaction rating</li>
-                        <li>Guided students to achieve the highest average final grade in course history.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <p><strong>GG56 Korea</strong> — 2023–2024</p>
-                    <p>UI/UX & Digital Marketing Intern</p>
-                </div>
-                <div class="exp-body">
-                    <ul class="exp-bullets">
-                        <li>Increased app downloads by 2,000+ on Google Play Store by leading co-design workshops, conducting usability testing, and resolving 50+ bugs.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <p><strong>MSW Media</strong> — 2023–2023</p>
-                    <p>Summer Technology Analyst</p>
-                </div>
-                <div class="exp-body">
-                    <ul class="exp-bullets">
-                        <li>Reduced application load times by 45% through UX research and testing.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <p><strong>Sangrok Orphanage</strong> — 2014–2023</p>
-                    <p>Student Volunteer</p>
-                </div>
-                <div class="exp-body">
-                    <ul class="exp-bullets">
-                        <li>Taught English to elementary students once a week, tailoring lessons to individual student proficiency</li>
-                        <li>Organized biweekly outings, events, and activities.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <p><strong>EduSpot Academy, Multiple Computer Science & AP Courses</strong> — 2021–2022</p>
-                    <p>Teaching Assistant | 181 students</p>
-                </div>
-                <div class="exp-body">
-                    <ul class="exp-bullets">
-                        <li><strong>Teaching Assistant</strong> (ACSL Junior Division Prep, 42 students across 3 terms): developed class assignments.</li>
-                        <li><strong>Teaching Assistant</strong> (AP CS A, 64 students across 4 terms): created tutorial videos with worked solutions.</li>
-                        <li><strong>Teaching Assistant</strong> (AP Capstone, 46 students across 3 terms): mentored individual research projects.</li>
-                        <li><strong>Teaching Assistant</strong> (USACO Silver, 15 students in 1 term): hosted bi-weekly debugging sessions.</li>
-                        <li><strong>Teaching Assistant</strong> (USACO Bronze, 14 students in 1 term): graded weekly checks, homework, and problem sets.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="exp-item">
-                <div class="exp-header">
-                    <p><strong>Korea Business Competition</strong> — 2021–2022</p>
-                    <p>Web Developer</p>
-                </div>
-                <div class="exp-body">
-                    <ul class="exp-bullets">
-                        <li>Designed and developed the competition's website: <a href="https://www.koreabusinesscompetition.org/" target="_blank">koreabusinesscompetition.org</a></li>
-                    </ul>
-                </div>
+            <div class="news-item">
+                <span class="news-date">February 2026</span>
+                <p class="news-text">Accepted to 5 PhD programs 🎉🎉</p>
             </div>
         </div>
     </section>
 
-
- 
-     <footer>
+    <footer>
         <p>© 2025 Joyce Gill. All rights reserved.</p>
     </footer>
 
@@ -546,9 +313,6 @@
     // Add gentle floating animation to the entire flower
     const floatingGallery = document.querySelector('.floating-gallery');
     floatingGallery.style.animation = 'flowerFloat 5s ease-in-out infinite, flowerBounce 8s ease-in-out infinite';
-
-        // Apply the same swaying animation to the central profile image (animate the img to preserve centering)
-    // Profile image remains static (no petal sway) per latest request
         
     // Add CSS animations dynamically
     const style = document.createElement('style');
@@ -584,12 +348,6 @@
     `;
     document.head.appendChild(style);
 
-    // Experience dropdown toggles (click header to expand/collapse)
-    document.querySelectorAll('.exp-item .exp-header').forEach(function(header){
-        header.addEventListener('click', function(){
-            header.parentElement.classList.toggle('open');
-        });
-    });
     </script>
 </body>
 </html> 

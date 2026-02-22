@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Joyce Gill</title>
+    <link rel="stylesheet" href="portfolio.css?v=4">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.jpg" type="image/jpeg">
+    <style>
+        .video-container {
+            max-width: 800px;
+            margin: 3em auto 0;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .video-description {
+            max-width: 800px;
+            margin: 2em auto 0;
+            padding: 1.5em 2em;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #2f9fe4;
+        }
+        .video-description p {
+            margin: 0;
+            color: #2c3e50;
+            line-height: 1.7;
+            font-size: 1rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+        .video-container iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            .video-description { padding: 1.2em 1.5em; margin: 2em auto 0; }
+            .video-description p { font-size: 0.95rem; }
+            .video-container iframe { height: 250px; }
+        }
+        @media (max-width: 480px) {
+            .video-description { padding: 1em 1.2em; margin: 1.5em auto 0; }
+            .video-description p { font-size: 0.9rem; }
+            .video-container iframe { height: 200px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hamburger-menu" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li class="nav-icon"><a href="mailto:joyceygill@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a></li>
+            <li class="nav-icon"><a href="https://www.linkedin.com/in/joycegill/" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+            <li class="nav-icon"><a href="https://github.com/joycegill" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="visible">
+        <h2 id="about-title">About Me</h2>
+        <div class="about-content">
+            <p>My name is Joyce Gill and I am a senior at <a href="https://www.grinnell.edu/" target="_blank">Grinnell College</a> majoring in Computer Science with concentrations in Statistics/Data Science and Digital Studies. At Grinnell, I am currently working as a Human-AI Interaction researcher under Professor Sarah Purcell, Statistics Researcher under Professor Shonda Kuiper, and Lead Instructor at the Grinnell Middle School.</p>
+
+            <p>This past summer, I worked at <a href="https://hcii.cmu.edu/" target="_blank">Carnegie Mellon University's Human-Computer Interaction Institute (HCII)</a> through the <a href="https://hcii.cmu.edu/summer-research-program" target="_blank">NSF REU Program</a>. I worked under Professor Paulo Carvalho to investigate the efficacy of mastery-based testing in fostering effective self-regulated learning behaviors in CS1 courses.</p>
+
+            <p>I previously worked at <a href="https://www.engineering.columbia.edu/" target="_blank">Columbia University</a> through the <a href="https://www.amazon.science/academic-engagements/columbia-engineering-and-amazon-launch-undergraduate-program-to-increase-diversity-and-inclusiveness-in-tech-fields" target="_blank">Amazon Summer Research (SURE) Program</a>. I worked under Professor Brian A. Smith to explore how augmented reality (AR) can be used to combat gentrification and preserve oral history in Harlem, New York.
+            I've also completed one software engineering and two UI/UX internships at startups.</p>
+
+            <p>My research interests lie at the intersection of human-AI interaction and education. I am also an incoming PhD student!! More details coming soon.</p>
+
+            <p>A little bit more about me: I was born and raised in Seoul, South Korea, and my family is from Omaha, Nebraska. In my free time, I enjoy hiking, traveling, going on very long walks, and spending time with my friends, family, and dog.</p>
+        </div>
+
+        <div class="video-container">
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/g7bS59_iVTE"
+                title="Joyce Gill - Grinnell College Information Session"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="video-description">
+            <p>During my second year of undergrad, I had the privilege of being selected to co-host the Grinnell College Information Session, which is filmed once every ~5 years. This was a huge honor for me, as I was the youngest student in Grinnell's history to be given this opportunity (this role has traditionally been reserved for seniors).
+            While I was super nervous and have changed a lot since, I am so proud to have represented my college. Feel free to watch!</p>
+        </div>
+    </section>
+
+    <script>
+    // Mobile hamburger menu
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('nav ul li a');
+    hamburgerMenu.addEventListener('click', () => {
+        hamburgerMenu.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerMenu.classList.remove('active');
+            nav.classList.remove('active');
+        });
+    });
+    </script>
+</body>
+</html>
