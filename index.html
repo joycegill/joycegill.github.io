@@ -111,6 +111,7 @@
             .profile-container {
                 flex-direction: column;
                 gap: 4em;
+                align-items: center;
             }
             
             .floating-gallery {
@@ -119,12 +120,14 @@
                 margin-bottom: 2em;
             }
             .home-bio {
-                min-height: 200px;
+                min-height: 0;
             }
             .text-content {
-                height: 200px;
-                min-height: 200px;
+                height: auto;
+                min-height: 0;
                 margin-top: 2em;
+                width: 100%;
+                max-width: 420px;
             }
             
             .floating-image {
@@ -140,10 +143,14 @@
             }
             
             #home {
-                padding-bottom: 1em;
+                padding-bottom: 2em;
                 margin-bottom: 0;
             }
             
+            #news {
+                margin-top: 0;
+                padding-top: 2em;
+            }
         }
         
         @media (max-width: 480px) {
@@ -157,11 +164,11 @@
                 margin-bottom: 1.5em;
             }
             .home-bio {
-                min-height: 176px;
+                min-height: 0;
             }
             .text-content {
-                height: 176px;
-                min-height: 176px;
+                height: auto;
+                min-height: 0;
                 margin-top: 1.5em;
             }
             
@@ -178,10 +185,13 @@
             }
             
             #home {
-                padding-bottom: 0.5em;
+                padding-bottom: 2em;
                 margin-bottom: 0;
             }
             
+            #news {
+                padding-top: 1.5em;
+            }
         }
     </style>
 </head>
@@ -232,8 +242,8 @@
                 <h1>Hello World, I'm Joyce! 👋</h1>
                 <div class="home-bio">
                     <p>I am an incoming PhD student studying human-AI interaction and education.</p>
-                    <p>I am currently a senior at Grinnell College, working towards my Bachelor's in Computer Science with concentrations in Statistics/Data Science and Digital Studies (Expected May 2026).</p>
-                    <p>Previously, I interned at Carnegie Mellon University's Human-Computer Interaction Institute, Columbia University, Amazon, and three startups.</p>
+                    <p>I am currently a senior at Grinnell College, working towards my Bachelor's in Computer Science with concentrations in Statistics/Data Science and Digital Studies with Honors (Expected May 2026).</p>
+                    <p>Previously, I interned at <a href="https://hcii.cmu.edu/summer-research-program" target="_blank">Carnegie Mellon University's Human-Computer Interaction Institute</a> under <a href="https://www.paulocarvalho.me/" target="_blank">Professor Paulo Carvalho</a>, <a href="https://www.engineering.columbia.edu/about/engineering-community-engagement/hallmark-programs/sure-program" target="_blank">Columbia University</a> under <a href="https://ceal.cs.columbia.edu/people/" target="_blank">Professor Brian Smith</a>, <a href="https://www.amazon.science/" target="_blank">Amazon Science</a>, and three startups.</p>
                 </div>
             </div>
         </div>
@@ -254,7 +264,7 @@
     </section>
 
     <footer>
-        <p>© 2025 Joyce Gill. All rights reserved.</p>
+        <p>© 2026 Joyce Gill. All rights reserved.</p>
     </footer>
 
     <script>
